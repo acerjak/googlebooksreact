@@ -29,6 +29,6 @@ require('mongoose').connect(process.env.MONGODB_URI || process.env.LOCAL_URI, {
   useUnifiedTopology: true
 })
   //start app listen for server on PORT or 3001
-  .then(() => app.listen(process.env.PORT || 3001))
+  .then(() => app.listen(process.env.PORT || 3000))
   //catch any errors
   .catch(err => console.error(err))
