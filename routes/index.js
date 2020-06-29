@@ -1,5 +1,5 @@
 //bring in router
-const router = require('express')
+const router = require('express').Router()
 
 //define routes in folder
 router.use('/api', require('./bookRoutes.js'))
