@@ -2,7 +2,6 @@
 const router = require('express').Router()
 //bring in axios
 const axios = require('axios')
-// const { Book } = require('../models')
 
 //search for a book with query
 router.get('/book/:search', (req, res) => {
