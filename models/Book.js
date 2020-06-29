@@ -6,7 +6,6 @@ const BookSchema = new Schema ({
     description: String,
     image: String,
     link: String,
-    bookId: String
 })
 
 module.exports = model('Book', BookSchema)
