@@ -2,6 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
+import { grey } from '@material-ui/core/colors'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -13,7 +14,8 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.primary.dark.text,
       border: 'black solid 0.25rem',
       margin: '5px',
-      boxShadow: '0 3px 5px 2px ',
+      boxShadow: '1 1px 5px 1px',
+      backgroundColor: '#E0E0E0',
     },
   }))
 
