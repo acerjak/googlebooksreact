@@ -13,10 +13,12 @@ app.use(express.static(join(__dirname, 'client', 'build')))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-
+//bring in routes
 app.use(require('./routes'))
 
+//bring in everything
 app.get('*', (req, res) => {
+  //send file to bring together directory name, client, build, and index.html
   res.sendFile(join(__dirname, 'client', 'build', 'index.html'))
 })
 
