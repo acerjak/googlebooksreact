@@ -1,5 +1,8 @@
+//build router
 const router = require('express').Router()
+//bring in Book model for routes
 const { Book } = require('../models')
+
 //GET all books
 router.get('/books', (req, res) => {
     Book.find()
@@ -14,9 +17,10 @@ router.post('/books', (req, res) => {
 })
 //DELETE a book by ID
 router.delete('/books/:id', (req, res) => {
-    Books.findByIdAndDelete(req.params.id)
+    Book.findByIdAndDelete(req.params.id)
         .then(() => res.sendStatus(200))
         .catch(err => console.error(err))
 })
 
+//export to routes index
 module.exports = router
