@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Saved = () => {
-    return(
+    return (
         <>
         <h1>This is the Saved Page</h1>
         </>
