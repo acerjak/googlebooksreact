@@ -11,12 +11,14 @@ import axios from 'axios'
 
 const useStyles = makeStyles({
     root: {
-      display: "inlineBlock",
+      maxWidth: 600,
       margin: "5px",
       border: "1px solid grey",
     },
     media: {
-      height: 200,
+      marginLeft: 50,
+      marginTop: 25,
+      height: 300,
       width: 200,
     },
   })
@@ -74,7 +76,7 @@ const Home = () => {
                                     {book.volumeInfo.title}
                                 </Typography>                            
                                 <Typography gutterBottom variant="h5" component="h2">
-                                    {book.volumeInfo.authors}
+                                    {book.volumeInfo.authors[0]}
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
                                     {book.volumeInfo.description}
