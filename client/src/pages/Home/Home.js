@@ -36,7 +36,7 @@ const Home = () => {
 
     bookState.handleSearchBook = event => {
         event.preventDefault()
-        axios.get(`/api/book/${bookState.search}`)
+        axios.get(`/api/books/${bookState.search}`)
             .then(({ data }) => {
                 console.log(data.items)
                 setBookState({ ...bookState, books: data.items })
@@ -82,7 +82,7 @@ const Home = () => {
             <div>
                 {
                     bookState.books.map(book => (
-                        <Card className={classes.root}>
+                        <Card key={book.id} className={classes.root}>
                           <CardMedia
                             className={classes.media}
                             image={book.volumeInfo.imageLinks.smallThumbnail}
