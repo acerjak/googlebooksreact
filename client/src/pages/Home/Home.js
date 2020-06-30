@@ -44,6 +44,23 @@ const Home = () => {
             .catch(err => console.error(err))
     }
 
+    bookState.handleSaveBook = book => {
+        console.log(book)
+        axios.post('/api/books', {
+            title: book.volumeInfo.title,
+            authors: book.volumeInfo.authors[0],
+            description: book.volumeInfo.description,
+            image: book.volumeInfo.imageLinks.smallThumbnail,
+            link: book.volumeInfo.previewLink,
+            bookId: book.id
+        })
+            .then(() => {
+                const books = bookState.books
+                const booksFiltered = books.filter( googleBook => googleBook.id !== book.id)
+                setBookState({ ...bookState, books: booksFiltered })
+            })
+            .catch(err => console.error(err))
+    }
 
     return (
         <>
@@ -84,7 +101,10 @@ const Home = () => {
                             </CardContent>
                             <CardActions>
                                 <hr></hr>
-                                <Button size="medium" color="primary">
+                                <Button 
+                                size="medium" 
+                                color="primary"
+                                onClick={() => bookState.handleSaveBook(book)}>
                                     Save
                                 </Button>
                                 <Button size="medium" color="primary" href={book.volumeInfo.previewLink}>
