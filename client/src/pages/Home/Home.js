@@ -11,12 +11,13 @@ import axios from 'axios'
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 345,
+      display: "inlineBlock",
       margin: "5px",
       border: "1px solid grey",
     },
     media: {
-      height: 140,
+      height: 200,
+      width: 200,
     },
   })
 
@@ -68,25 +69,26 @@ const Home = () => {
                             image={book.volumeInfo.imageLinks.smallThumbnail}
                             title={book.volumeInfo.title}
                           />
-                          <CardContent>
-                            <Typography gutterBottom variant="h5" component="h2">
-                              {book.volumeInfo.title}
-                            </Typography>                            
-                            <Typography gutterBottom variant="h5" component="h2">
-                              {book.volumeInfo.authors}
-                            </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
-                              {book.volumeInfo.description}
-                            </Typography>
-                          </CardContent>
-                        <CardActions>
-                          <Button size="small" color="primary">
-                            Save
-                          </Button>
-                          <Button size="small" color="primary" href={book.volumeInfo.previewLink}>
-                            Link to Book
-                          </Button>
-                        </CardActions>
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="h2">
+                                    {book.volumeInfo.title}
+                                </Typography>                            
+                                <Typography gutterBottom variant="h5" component="h2">
+                                    {book.volumeInfo.authors}
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                    {book.volumeInfo.description}
+                                </Typography>
+                            </CardContent>
+                            <CardActions>
+                                <hr></hr>
+                                <Button size="medium" color="primary">
+                                    Save
+                                </Button>
+                                <Button size="medium" color="primary" href={book.volumeInfo.previewLink}>
+                                    View
+                                </Button>
+                            </CardActions>
                         </Card>
                     ))
                 }
