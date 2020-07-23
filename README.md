@@ -20,8 +20,6 @@
 ![gif](/gif/googleBooksGif.gif "gif")
 ## Questions
 > Please send any inquiries or concerns through [acerjak](https://api.github.com/users/acerjak "GitHub Profile") or at amandacerjak@gmail.com.
-
-![profilepic](https://avatars1.githubusercontent.com/u/62491401?v=4 "acerjak")
 ***
 #### Created by acerjak June 2020
  
