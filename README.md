@@ -3,7 +3,7 @@
 > This application allows the user to query Google Books API with an input keyword. This will generate a selection of 10 books to be saved or viewed on the Google Books website. If you head to the Saved page, you will see all "saved books" rendered for review. If you decide you no longer want a saved book, there is an option to delete.
 ## Table of Contents
 * [Installation](#installation)
-* [Deployed Link](#deployed_link)
+* [Link](#link)
 * [Gif](#gif)
 * [Credits](#credits)
 * [Questions](#questions)
