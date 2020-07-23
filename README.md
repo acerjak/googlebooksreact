@@ -10,6 +10,8 @@
 ## Installation
 #### Please follow this command to install npm dependencies:
 > npm i
+## Deployed Link
+> https://enigmatic-journey-49156.herokuapp.com/
 ## Credits
 > Google Book API, videos from class, and myself are to thank for the application success.
 ## License
