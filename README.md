@@ -11,7 +11,7 @@
 ## Installation
 #### Please follow this command to install npm dependencies:
 > npm i
-## Deployed Link
+## Link
 > https://enigmatic-journey-49156.herokuapp.com/
 ## Gif
 ![gif](/gif/googleBooksGif.gif "gif")
