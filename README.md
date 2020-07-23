@@ -7,7 +7,6 @@
 * [Gif](#gif)
 * [Credits](#credits)
 * [Questions](#questions)
-* [Gif](#gif)
 ## Installation
 #### Please follow this command to install npm dependencies:
 > npm i
