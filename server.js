@@ -24,7 +24,7 @@ app.get('*', (req, res) => {
 
 //set up mongoose connection for deployment
 //use mongo or local
-require('mongoose').connect(process.env.MONGODB_URI || process.env.LOCAL_URI, {
+require('mongoose').connect(process.env.DB_URI || process.env.LOCAL_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
