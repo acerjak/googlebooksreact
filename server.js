@@ -23,12 +23,12 @@ app.get('*', (req, res) => {
 })
 
 //set up mongoose connection for deployment
-//use mongo or local
+//use Mongo Atlas DB or local compass DB
 require('mongoose').connect(process.env.DB_URI || process.env.LOCAL_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
-  //start app listen for server on PORT or 3001
+  //async start app listen for server on PORT or 3001
   .then(() => app.listen(process.env.PORT || 3001))
   //catch any errors
   .catch(err => console.error(err))
