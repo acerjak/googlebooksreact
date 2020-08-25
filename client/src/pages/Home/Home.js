@@ -85,7 +85,7 @@ const Home = () => {
                         <Card key={book.id} className={classes.root}>
                           <CardMedia
                             className={classes.media}
-                            image={book.volumeInfo.imageLinks.smallThumbnail}
+                            image={book.volumeInfo.imageLinks.smallThumbnail ? book.volumeInfo.imageLinks.smallThumbnail : null}
                             title={book.volumeInfo.title}
                           />
                             <CardContent>
@@ -93,7 +93,7 @@ const Home = () => {
                                     {book.volumeInfo.title}
                                 </Typography>                            
                                 <Typography gutterBottom variant="h5" component="h2">
-                                    {book.volumeInfo.authors[0]}
+                                    {book.volumeInfo.authors ? book.volumeInfo.authors[0] : null}
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
                                     {book.volumeInfo.description}
