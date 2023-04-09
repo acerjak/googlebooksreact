@@ -1,0 +1,11 @@
+{
+    "parser": "@babel/eslint-parser",
+    "plugins": ["jsx"],
+    "parserOptions": {
+      "requireConfigFile": false,
+      "babelOptions": {
+        "babelrc": false,
+        "configFile": false
+      }
+    }
+  }

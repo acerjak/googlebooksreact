@@ -50,7 +50,7 @@ const Home = () => {
             title: book.volumeInfo.title,
             authors: book.volumeInfo.authors[0],
             description: book.volumeInfo.description,
-            image: book.volumeInfo.imageLinks.smallThumbnail,
+            image: book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.smallThumbnail : null,
             link: book.volumeInfo.previewLink,
             bookId: book.id
         })
@@ -85,7 +85,7 @@ const Home = () => {
                         <Card key={book.id} className={classes.root}>
                           <CardMedia
                             className={classes.media}
-                            image={book.volumeInfo.imageLinks.smallThumbnail ? book.volumeInfo.imageLinks.smallThumbnail : null}
+                            image={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.smallThumbnail : null}
                             title={book.volumeInfo.title}
                           />
                             <CardContent>
