@@ -1,7 +1,7 @@
 {
   "name": "googlebooksreact",
   "version": "1.0.0",
-  "description": "",
+  "description": "Project made during UCI Coding Bootcamp 2020, maintained by Amanda Cerjak for portfolio purposes.",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
