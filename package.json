@@ -1,6 +1,10 @@
 {
   "name": "googlebooksreact",
   "version": "1.0.0",
+  "engines": {
+    "node": "19.x",
+    "npm": "9.x"
+  },
   "description": "Project made during UCI Coding Bootcamp 2020, maintained by Amanda Cerjak for portfolio purposes.",
   "main": "server.js",
   "scripts": {
