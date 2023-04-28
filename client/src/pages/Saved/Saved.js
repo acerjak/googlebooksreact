@@ -49,35 +49,48 @@ const Saved = () => {
     }
 
     return (
-        <div>
+        <div className='book-container'>
             {
                 bookState.books.map(book => (
-                    <Card key={book.bookId} className={classes.root}>
-                        <CardMedia
-                            className={classes.media}
-                            image={book.image}
-                            title={book.title}
-                          />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="h2">
+                    <Card 
+                    key={book.bookId} 
+                    className='book'>
+                        <div className='book-header'>
+                            <CardMedia
+                                className='book-image'
+                                image={book.image}
+                                title={book.title}
+                                />
+                            <div>
+                                <Typography 
+                                gutterBottom>
                                     {book.title}
                                 </Typography>                            
-                                <Typography gutterBottom variant="h5" component="h2">
+                                <Typography 
+                                gutterBottom className='book-subheader'>
                                     {book.authors[0]}
                                 </Typography>
+                            </div>
+                        </div>
+                            <CardContent>
                                 <Typography variant="body2" color="textSecondary" component="p">
-                                    {book.description}
+                                    {book.description.length <= 50 ? book.description : (book.description.substr(0, 50) + "...")}
                                 </Typography>
                             </CardContent>
                             <CardActions>
                                 <hr></hr>
                                 <Button 
                                 size="medium" 
+                                variant="outlined" 
                                 color="secondary"
                                 onClick={() => bookState.handleDeleteBook(book)}>
                                     Delete
                                 </Button>
-                                <Button size="medium" color="primary" href={book.link}>
+                                <Button 
+                                size="medium"
+                                variant="outlined"  
+                                color="primary" 
+                                href={book.link}>
                                     View
                                 </Button>
                             </CardActions>
