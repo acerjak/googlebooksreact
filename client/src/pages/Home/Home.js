@@ -10,16 +10,17 @@ import Typography from '@material-ui/core/Typography'
 import axios from 'axios'
 
 const useStyles = makeStyles({
-    root: {
-      maxWidth: 600,
-      margin: "5px",
-      border: "1px solid grey",
-    },
     media: {
       marginLeft: 50,
       marginTop: 25,
       height: 300,
       width: 200,
+    },
+    root: {
+      width: 400,
+      height: 250,
+      margin: "5px",
+      border: "1px solid grey",
     },
   })
 
@@ -64,10 +65,12 @@ const Home = () => {
     return (
         <>
             <form
+            className='book-form'
             onSubmit={bookState.handleSearchBook}>
                 <TextField 
                 label="Search Google Books" 
                 name="search"
+                className='book-search'
                 value={bookState.search}
                 onChange={bookState.handleInputChange} />
                 <Button 
@@ -78,35 +81,46 @@ const Home = () => {
                     Search
                 </Button>
             </form>
-            <div>
+            <div className='book-container'>
                 {
                     bookState.books.map(book => (
-                        <Card key={book.id} className={classes.root}>
-                          <CardMedia
-                            className={classes.media}
-                            image={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.smallThumbnail : null}
-                            title={book.volumeInfo.title}
-                          />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="h2">
-                                    {book.volumeInfo.title}
-                                </Typography>                            
-                                <Typography gutterBottom variant="h5" component="h2">
-                                    {book.volumeInfo.authors ? book.volumeInfo.authors[0] : null}
-                                </Typography>
-                                <Typography variant="body2" color="textSecondary" component="p">
-                                    {book.volumeInfo.description}
+                        <Card key={book.id} className='book'>
+                            <div>
+                                <div className='book-header'>
+                                    <CardMedia
+                                        className='book-image'
+                                        image={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.smallThumbnail : 'http://via.placeholder.com/75x100'}
+                                        title={book.volumeInfo.title}
+                                        />
+                                    <div>
+                                        <Typography gutterBottom >
+                                            {book.volumeInfo.title}
+                                        </Typography> 
+                                        <Typography className='book-subheader' gutterBottom>
+                                            {book.volumeInfo.authors ? book.volumeInfo.authors[0] : null}
+                                        </Typography>
+                                    </div>
+                                </div>
+                            </div>
+                            <CardContent>                           
+                                <Typography className='book-description' variant="body2" color="textSecondary" component="p">
+                                    {book.volumeInfo.description.length <= 50 ? book.volumeInfo.description : (book.volumeInfo.description.substr(0, 50) + "...")}
                                 </Typography>
                             </CardContent>
                             <CardActions>
                                 <hr></hr>
                                 <Button 
-                                size="medium" 
+                                size="medium"
+                                variant="outlined"  
                                 color="primary"
                                 onClick={() => bookState.handleSaveBook(book)}>
                                     Save
                                 </Button>
-                                <Button size="medium" color="primary" href={book.volumeInfo.previewLink}>
+                                <Button 
+                                size="medium" 
+                                color="primary" 
+                                variant="outlined" 
+                                href={book.volumeInfo.previewLink}>
                                     View
                                 </Button>
                             </CardActions>
