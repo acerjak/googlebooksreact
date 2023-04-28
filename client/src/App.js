@@ -8,13 +8,14 @@ import Navbar from './components/Navbar'
 import Header from './components/Header'
 import Home from './pages/Home'
 import Saved from './pages/Saved'
+import '../src/styles/app.css';
 
 const App = () => {
   return (
     <Router>
       <div>
         <Navbar />
-        <Header />
+        {/* <Header /> */}
         <Switch>
           <Route exact path='/'>
             <Home />
