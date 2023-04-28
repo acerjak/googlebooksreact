@@ -1,10 +1,6 @@
 {
   "name": "googlebooksreact",
   "version": "1.0.0",
-  "engines": {
-    "node": "19.x",
-    "npm": "9.x"
-  },
   "description": "Project made during UCI Coding Bootcamp 2020, maintained by Amanda Cerjak for portfolio purposes.",
   "main": "server.js",
   "scripts": {
@@ -14,7 +10,7 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-prebuild": "install",
+    "heroku-prebuild": "npm install",
     "heroku-postbuild": "npm run build"
   },
   "repository": {
@@ -35,7 +31,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.3",
     "if-env": "^1.0.4",
-    "mongoose": "^5.13.15"
+    "mongoose": "^7.0.3"
   },
   "devDependencies": {}
 }

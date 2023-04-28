@@ -38,7 +38,6 @@ const Home = () => {
         event.preventDefault()
         axios.get(`/api/books/${bookState.search}`)
             .then(({ data }) => {
-                console.log(data)
                 setBookState({ ...bookState, books: data })
             })
             .catch(err => console.error(err))
