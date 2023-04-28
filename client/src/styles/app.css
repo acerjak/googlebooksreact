@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Retro';
+    src: local('Retro', url());
+}
+
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    justify-content: center;
+    background: #fff;
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+.book {
+    border-radius: calc(0.1 * 100px);
+    box-shadow: 0px 4px 14px 0px rgba(70, 70, 70, 0.38);
+    width: 400px;
+    height: 250px;
+    margin: 5px;
+    border: "1px solid lightgrey";
+}
+
+.book-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 5px;
+    row-gap: 12px;
+}
+
+.book-image {
+    height: 100px;
+    width: 75px;
+    margin: 10px;
+}
+
+.book-header {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.book-search {
+    background-color: #fff;
+}
+
+.book-subheader {
+    font-size: 16px;
+}
+
+.book-description {
+    font-size: 1rem;
+}
