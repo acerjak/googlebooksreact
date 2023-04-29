@@ -1,6 +1,19 @@
-@font-face {
+/* @font-face {
     font-family: 'Retro';
-    src: local('Retro', url());
+    src: local('Retro', url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'));
+} */
+
+.book {
+    border-radius: calc(0.1 * 100px);
+    box-shadow: 0px 4px 14px 0px rgba(70, 70, 70, 0.38);
+    width: 400px;
+    height: 250px;
+    margin: 5px;
+    border: "1px solid lightgrey";
+}
+
+.book-description {
+    font-size: 1rem;
 }
 
 .book-container {
@@ -14,15 +27,6 @@
     margin-bottom: 20px;
   }
 
-.book {
-    border-radius: calc(0.1 * 100px);
-    box-shadow: 0px 4px 14px 0px rgba(70, 70, 70, 0.38);
-    width: 400px;
-    height: 250px;
-    margin: 5px;
-    border: "1px solid lightgrey";
-}
-
 .book-form {
     display: flex;
     justify-content: center;
@@ -35,12 +39,6 @@
     row-gap: 12px;
 }
 
-.book-image {
-    height: 100px;
-    width: 75px;
-    margin: 10px;
-}
-
 .book-header {
     display: flex;
     align-items: center;
@@ -49,14 +47,21 @@
     padding-right: 15px;
 }
 
+.book-image {
+    height: 100px;
+    width: 75px;
+    margin: 10px;
+}
+
 .book-search {
     background-color: #fff;
 }
 
 .book-subheader {
     font-size: 16px;
+    font-weight: 700;
 }
 
-.book-description {
-    font-size: 1rem;
+.hero-link {
+    font-family: 'Press Start 2P', cursive;
 }
