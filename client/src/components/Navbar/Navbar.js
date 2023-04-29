@@ -33,8 +33,8 @@ const Navbar = () => {
                     {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                         <MenuIcon />
                     </IconButton> */}
-                    <Typography variant="h6" className={classes.title}>
-                        <Link to="/" className={classes.link}>
+                    <Typography className={classes.title}>
+                        <Link to="/" className='hero-link'>
                             Google Books App
                         </Link>  
                     </Typography>                        
