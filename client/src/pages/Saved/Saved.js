@@ -31,7 +31,6 @@ const Saved = () => {
     useEffect(() => {
         axios.get('/api/books')
             .then(({ data }) => {
-                console.log(data)
                 setBookState({ ...bookState, books: data })
             })
             .catch(err => console.error(err))
@@ -62,38 +61,41 @@ const Saved = () => {
                                 title={book.title}
                                 />
                             <div>
-                                <Typography 
+                                <Typography
                                 gutterBottom>
                                     {book.title}
                                 </Typography>                            
-                                <Typography 
-                                gutterBottom className='book-subheader'>
+                                <Typography
+                                gutterBottom>
                                     {book.authors[0]}
                                 </Typography>
                             </div>
                         </div>
-                            <CardContent>
-                                <Typography variant="body2" color="textSecondary" component="p">
-                                    {book.description.length <= 50 ? book.description : (book.description.substr(0, 50) + "...")}
-                                </Typography>
-                            </CardContent>
-                            <CardActions>
-                                <hr></hr>
-                                <Button 
-                                size="medium" 
-                                variant="outlined" 
-                                color="secondary"
-                                onClick={() => bookState.handleDeleteBook(book)}>
-                                    Delete
-                                </Button>
-                                <Button 
-                                size="medium"
-                                variant="outlined"  
-                                color="primary" 
-                                href={book.link}>
-                                    View
-                                </Button>
-                            </CardActions>
+                        <CardContent>
+                            <Typography variant="body2" color="textSecondary" component="p">
+                            {(book.description == null || 
+                                book.description.length <= 50) ? 
+                                book.description : 
+                                (book.description.substr(0, 50) + "...")}
+                            </Typography>
+                        </CardContent>
+                        <CardActions>
+                            <hr></hr>
+                            <Button 
+                            size="medium" 
+                            variant="outlined" 
+                            color="secondary"
+                            onClick={() => bookState.handleDeleteBook(book)}>
+                                Delete
+                            </Button>
+                            <Button 
+                            size="medium"
+                            variant="outlined"  
+                            color="primary" 
+                            href={book.link}>
+                                View
+                            </Button>
+                        </CardActions>
                     </Card>
                 ))
             }
