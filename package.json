@@ -33,5 +33,7 @@
     "if-env": "^1.0.4",
     "mongoose": "^7.0.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  }
 }
