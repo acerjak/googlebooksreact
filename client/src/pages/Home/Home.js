@@ -89,7 +89,9 @@ const Home = () => {
                                 <div className='book-header'>
                                     <CardMedia
                                         className='book-image'
-                                        image={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.smallThumbnail : 'http://via.placeholder.com/75x100'}
+                                        image={book.volumeInfo.imageLinks ? 
+                                            book.volumeInfo.imageLinks.smallThumbnail : 
+                                            'https://images.placeholders.dev/?width=75&height=100&bgColor=%23f7f6f6&text=N/A&textColor=%236d6e71'}
                                         title={book.volumeInfo.title}
                                         />
                                     <div>
@@ -97,14 +99,19 @@ const Home = () => {
                                             {book.volumeInfo.title}
                                         </Typography> 
                                         <Typography className='book-subheader' gutterBottom>
-                                            {book.volumeInfo.authors ? book.volumeInfo.authors[0] : null}
+                                            {book.volumeInfo.authors ? 
+                                            book.volumeInfo.authors[0] : 
+                                            null}
                                         </Typography>
                                     </div>
                                 </div>
                             </div>
                             <CardContent>                           
                                 <Typography className='book-description' variant="body2" color="textSecondary" component="p">
-                                    {book.volumeInfo.description.length <= 50 ? book.volumeInfo.description : (book.volumeInfo.description.substr(0, 50) + "...")}
+                                    {(book.volumeInfo.description == null || 
+                                        book.volumeInfo.description.length <= 50) ? 
+                                        book.volumeInfo.description : 
+                                        (book.volumeInfo.description.substr(0, 50) + "...")}
                                 </Typography>
                             </CardContent>
                             <CardActions>
